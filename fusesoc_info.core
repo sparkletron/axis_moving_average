@@ -1,0 +1,37 @@
+CAPI=2:
+
+name: AFRL:math:axis_moving_average:1.0.0
+description: Creates an average of the data input.
+
+filesets:
+  src:
+    files:
+      - src/axis_moving_average.v
+    file_type: verilogSource
+  
+  tb:
+    files:
+      - tb/tb_axis.v : { file_type: verilogSource }
+      - tb/in.bin    : { file_type: user, copyto: in.bin }
+      
+  dep:
+    depend:
+      - AFRL:utility:helper:1.0.0
+      
+  dep_tb:
+    depend:
+      - AFRL:simulation:axis_stimulator
+      - AFRL:simulation:clock_stimulator
+    
+targets:
+  default: &default
+    filesets: [src, dep]
+  
+  sim:
+    <<: *default
+    default_tool: icarus
+    filesets_append: [tb, dep_tb]
+    toplevel: tb_axis
+        
+        
+    
