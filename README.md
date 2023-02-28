@@ -1,5 +1,5 @@
 # AXIS MOVING AVERAGE
-## Average input data using sliding window method
+### Average input data using sliding window method
 ---
 
    author: JayConvertino  
@@ -12,8 +12,6 @@
    
 ---
 
-![rtl_img](./rtl.png)
-
 ### Dependencies
 #### Build
   - AFRL:utility:helper:1.0.0
@@ -21,6 +19,7 @@
 #### Simulation
   - AFRL:simulation:axis_stimulator
   - AFRL:simulation:clock_stimulator
+  - AFRL:utility:sim_helper
 
 ### IP USAGE
 #### Parameters
@@ -36,10 +35,14 @@
 #### TB
 
 * tb_axis.v
-* in.bin
   
 ### fusesoc
 
 * fusesoc_info.core created.
-* Simulation uses icarus to run data through the core.
+* Simulation uses icarus to run data through the core. No verification
 
+#### TARGETS
+
+* RUN WITH: (fusesoc run --target=sim VENDER:CORE:NAME:VERSION)
+  - default (for IP integration builds)
+  - sim

@@ -1,5 +1,5 @@
 //******************************************************************************
-/// @file    tb_top_axis.v
+/// @file    tb_axis.v
 /// @author  JAY CONVERTINO
 /// @date    2022.10.24
 /// @brief   Generic AXIS test bench top with verification.
@@ -16,10 +16,6 @@ module tb_axis;
   localparam BUS_WIDTH  = 2;
   localparam USER_WIDTH = 1;
   localparam DEST_WIDTH = 1;
-  
-  localparam CLK_PERIOD = 500;
-  localparam RST_PERIOD = 1000;
-  
   wire                      tb_dut_valid;
   wire                      tb_dut_ready;
   wire [(BUS_WIDTH*8)-1:0]  tb_dut_data;
@@ -27,6 +23,7 @@ module tb_axis;
   wire                      tb_dut_last;
   wire [USER_WIDTH-1:0]     tb_dut_user;
   wire [DEST_WIDTH-1:0]     tb_dut_dest;
+  wire                      tb_eof;
   
   wire                      tb_stim_clk;
   wire                      tb_stim_rstn;
@@ -36,10 +33,6 @@ module tb_axis;
   wire                      tb_stim_last;
   wire [USER_WIDTH-1:0]     tb_stim_user;
   wire [DEST_WIDTH-1:0]     tb_stim_dest;
-  
-  reg         tb_cnt_clk  = 0;
-  reg         tb_cnt_rstn = 0;
-  wire [8:0]  tb_cnt_data;
   
   // fst dump command
   initial begin
@@ -67,7 +60,7 @@ module tb_axis;
     .BUS_WIDTH(BUS_WIDTH),
     .USER_WIDTH(USER_WIDTH),
     .DEST_WIDTH(DEST_WIDTH),
-    .FILE("in.bin")
+    .FILE("random.bin")
   ) slave_axis_stim (
     // output to slave
     .m_axis_aclk(tb_stim_clk),
@@ -78,7 +71,8 @@ module tb_axis;
     .m_axis_tkeep(tb_stim_keep),
     .m_axis_tlast(tb_stim_last),
     .m_axis_tuser(tb_stim_user),
-    .m_axis_tdest(tb_stim_dest)
+    .m_axis_tdest(tb_stim_dest),
+    .eof(tb_eof)
   );
   
   axis_moving_average #(
@@ -101,7 +95,7 @@ module tb_axis;
     .BUS_WIDTH(BUS_WIDTH),
     .USER_WIDTH(USER_WIDTH),
     .DEST_WIDTH(DEST_WIDTH),
-    .FILE("out.bin")
+    .FILE("out_random.bin")
   ) master_axis_stim (
     // write
     .s_axis_aclk(tb_stim_clk),
@@ -110,9 +104,10 @@ module tb_axis;
     .s_axis_tready(tb_dut_ready),
     .s_axis_tdata(tb_dut_data),
     .s_axis_tkeep(tb_dut_keep),
-    .s_axis_tlast(tb_dut_last),
+    .s_axis_tlast(1'b0),
     .s_axis_tuser(tb_dut_user),
-    .s_axis_tdest(tb_dut_dest)
+    .s_axis_tdest(tb_dut_dest),
+    .eof(~tb_dut_valid & tb_eof)
   );
   
 endmodule

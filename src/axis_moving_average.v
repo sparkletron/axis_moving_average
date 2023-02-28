@@ -66,12 +66,6 @@ module axis_moving_average
   //we are ready if the destination is ready
   assign s_axis_tready = m_axis_tready;
   
-//   initial begin
-//     for(index = 0; index < 2**c_WEIGHT_POWER; index++) begin
-//       $dumpvars(0, r_buffer_data[index]);
-//     end
-//   end
-  
   always @(posedge aclk) begin
     if(arstn == 1'b0) begin
       r_accumulator <= 0;
