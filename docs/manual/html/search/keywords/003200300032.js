@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("202",["Date"],[["2023",,[[,"2023/02/01",,,0,"File:axis_moving_average.v:2023/02/01"]]]]);

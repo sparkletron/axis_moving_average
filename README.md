@@ -1,5 +1,8 @@
 # AXIS MOVING AVERAGE
 ### Average input data using sliding window method
+
+![image](docs/manual/img/AFRL.png)
+
 ---
 
    author: JayConvertino  
@@ -19,17 +22,24 @@
 #### Previous
   - none
 
-### Dependencies
+### DOCUMENTATION
+  For detailed usage information, please navigate to one of the following sources. They are the same, just in a different format.
+
+  - [axis_moving_average.pdf](docs/manual/axis_moving_average.pdf)
+  - [github page](https://johnathan-convertino-afrl.github.io/axis_moving_average/)
+
+### DEPENDENCIES
 #### Build
+
   - AFRL:utility:helper:1.0.0
   
 #### Simulation
+
   - AFRL:simulation:axis_stimulator
   - AFRL:simulation:clock_stimulator
   - AFRL:utility:sim_helper
 
-### IP USAGE
-#### Parameters
+### Parameters
 
 * BUS_WIDTH : DEFAULT : 1 : Width of the AXIS bus in/out.
 * WEIGHT    : DEFAULT : 1 : Divisor for the average. Will only work with powers of 2 (1, 2, 4, 8, 16... etc)
@@ -43,12 +53,12 @@
 
 * tb_axis.v
   
-### fusesoc
+### FUSESOC
 
 * fusesoc_info.core created.
 * Simulation uses icarus to run data through the core. No verification
 
-#### TARGETS
+#### Targets
 
 * RUN WITH: (fusesoc run --target=sim VENDER:CORE:NAME:VERSION)
   - default (for IP integration builds)

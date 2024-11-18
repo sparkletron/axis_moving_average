@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("s_a",["Variable"],[["s_axis_tready",,[["axis_moving_average",,,,0,"File:axis_moving_average.v:axis_moving_average.s_axis_tready","SystemVerilogModule:axis_moving_average:s_axis_tready"]]]]);

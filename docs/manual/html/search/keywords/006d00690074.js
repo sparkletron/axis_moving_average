@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("mit",["Information"],[["MIT",,[[,"License MIT",,,0,"File:axis_moving_average.v:License_MIT"]]]]);

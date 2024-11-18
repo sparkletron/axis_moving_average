@@ -1,0 +1,1 @@
+﻿NDMenu.OnSectionLoaded("modules.js",[[1,"axis_moving_average"]]);
