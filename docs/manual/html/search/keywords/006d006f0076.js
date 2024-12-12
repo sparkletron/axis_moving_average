@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("mov",["Function"],[["moving_average",,[[,,,,0,"File2:tb_cocotb.py:moving_average"]]]]);

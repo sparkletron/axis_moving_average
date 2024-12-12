@@ -1,6 +1,6 @@
 CAPI=2:
 
-name: AFRL:math:axis_moving_average:1.0.0
+name: AFRL:math:axis_moving_average:1.0.1
 description: Creates an average of the data input.
 
 filesets:
@@ -8,6 +8,11 @@ filesets:
     files:
       - src/axis_moving_average.v
     file_type: verilogSource
+
+  tb_cocotb:
+    files:
+      - tb/tb_cocotb.py : {file_type : user, copyto : .}
+      - tb/tb_cocotb.v : { file_type: verilogSource }
   
   tb:
     files:
@@ -34,6 +39,31 @@ targets:
     default_tool: icarus
     filesets_append: [tb, dep_tb]
     toplevel: tb_axis
-        
-        
+
+  sim_cocotb:
+    <<: *default
+    description: Cocotb unit tests
+    flow: sim
+    flow_options:
+      tool: icarus
+      cocotb_module: tb_cocotb
+      timescale: 1ns/1ns
+      vcs_options: [-timescale=1ns/1ns]
+    filesets_append: [tb_cocotb]
+    toplevel: tb_cocotb
+    parameters:
+      - BUS_WIDTH
+      - WEIGHT
     
+parameters:
+  BUS_WIDTH:
+    datatype    : int
+    default     : 1
+    description : Width of axis bus
+    paramtype   : vlogparam
+
+  WEIGHT:
+    datatype    : int
+    default     : 16
+    description : Number of values to average
+    paramtype   : vlogparam

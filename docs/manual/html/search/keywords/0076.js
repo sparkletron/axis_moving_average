@@ -1,1 +1,1 @@
-﻿NDSearch.OnPrefixDataLoaded("v",["File"],[["v",,[[,"axis_moving_average.v",,,0,"File:axis_moving_average.v:axis_moving_average.v"]]]]);
+﻿NDSearch.OnPrefixDataLoaded("v",["File"],[["v",,[[,"axis_moving_average.v",,,0,"File:axis_moving_average.v:axis_moving_average.v"],[,"tb_axis.v",,,0,"File2:tb_axis.v:tb_axis.v"],[,"tb_cocotb.v",,,0,"File2:tb_cocotb.v:tb_cocotb.v"]]]]);

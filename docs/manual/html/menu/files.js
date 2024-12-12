@@ -1,1 +1,1 @@
-﻿NDMenu.OnSectionLoaded("files.js",[[1,"axis_moving_average.v"]]);
+﻿NDMenu.OnSectionLoaded("files.js",[[2,"axis_moving_average","File:",[[1,"axis_moving_average.v"]]],[2,"axis_moving_average_test_bench","File2:",[[1,"tb_axis.v"],[1,"tb_cocotb.py"],[1,"tb_cocotb.v"]]]]);

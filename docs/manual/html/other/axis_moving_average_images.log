@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.21)  21 NOV 2024 19:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.21)  11 DEC 2024 19:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -306,9 +306,9 @@ File: img/AFRL.png Graphic file (type png)
 Package pdftex.def Info: img/AFRL.png  used on input line 122.
 (pdftex.def)             Requested size: 310.49771pt x 67.51028pt.
 
-:tex2html_wrap198:lthtmlCropMarkHeight:=73.51028pt
+:tex2html_wrap225:lthtmlCropMarkHeight:=73.51028pt
 
-:tex2html_wrap198:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
+:tex2html_wrap225:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 Preview: Tightpage -65781 -65781 65781 65781
 [1 </home/convertinoj/Programming/HDL/fusesoc/ip_pub/math/axis_moving_average/d
 ocs/manual/img/AFRL.png>]
@@ -317,14 +317,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 131.
 
-:tex2html_wrap_indisplay203:lthtmlCropMarkHeight:=19.59839pt
+:tex2html_wrap_indisplay230:lthtmlCropMarkHeight:=19.59839pt
 
-:tex2html_wrap_indisplay203:lthtmlCropMarkDepth:=6.85951pt:1ex:=4.30554pt
+:tex2html_wrap_indisplay230:lthtmlCropMarkDepth:=6.85951pt:1ex:=4.30554pt
 [2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-:tex2html_wrap_inline88:lthtmlCropMarkHeight:=6.0pt
+:tex2html_wrap_inline111:lthtmlCropMarkHeight:=6.0pt
 
-:tex2html_wrap_inline88:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
+:tex2html_wrap_inline111:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 [3] (./axis_moving_average_images.aux)
 
 Package rerunfilecheck Warning: File `axis_moving_average_images.out' has chang

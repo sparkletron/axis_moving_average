@@ -82,6 +82,8 @@ module axis_moving_average
   reg [8*BUS_WIDTH-1:0] r_buffer_data[(2**c_WEIGHT_POWER)-1:0];
   
   reg [c_BUF_SIZE-1:0]  r_accumulator;
+
+  reg r_always_valid;
   
   // var: m_axis_tdata
   // Trim and shift data to get amount, this is the divide out.
@@ -89,7 +91,7 @@ module axis_moving_average
 
   // var: m_axis_tvalid
   // Single clock edge valid
-  assign m_axis_tvalid = s_axis_tvalid;
+  assign m_axis_tvalid = r_always_valid;
 
   // var: s_axis_tready
   // We are ready if the destination is ready
@@ -98,7 +100,8 @@ module axis_moving_average
   // accumulator processes
   always @(posedge aclk) begin
     if(arstn == 1'b0) begin
-      r_accumulator <= 0;
+      r_accumulator   <= 0;
+      r_always_valid  <= 1'b0;
       
       //0 out buffer
       for(index = 0; index < 2**c_WEIGHT_POWER; index++) begin
@@ -107,8 +110,10 @@ module axis_moving_average
       
 //       $display("SIZE: %d %d %d", (2**c_WEIGHT_POWER), c_WEIGHT_POWER, c_BUF_SIZE);
     end else begin
-      if(s_axis_tvalid == 1'b1) begin
-      
+      r_always_valid <= r_always_valid;
+
+      if((s_axis_tvalid == 1'b1) && (s_axis_tready == 1'b1)) begin
+        r_always_valid <= 1'b1;
         //add data
         r_accumulator <= r_accumulator + s_axis_tdata - r_buffer_data[2**c_WEIGHT_POWER-1];
         

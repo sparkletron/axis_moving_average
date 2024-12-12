@@ -1,1 +1,1 @@
-﻿NDMenu.OnSectionLoaded("modules.js",[[1,"axis_moving_average"]]);
+﻿NDMenu.OnSectionLoaded("modules.js",[[1,"axis_moving_average"],[1,"clk_stim"],[1,"dut"],[1,"slave_axis_stim"],[1,"tb_axis"],[1,"tb_cocotb"]]);
