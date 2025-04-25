@@ -28,7 +28,7 @@
 
 \par
 This core provides the AXIS Moving Average function. This impliments the moving average algorithm in an efficent way for FPGAs.
-Efficent since it uses powers of two to calculate its weights. This formula implimented is \[\frac{X_{0} + ... X_{n}}{n}\] where n is constrained
+Efficent since it uses powers of two to calculate its weights. This formula implimented is where n is constrained
 to a power of two and X is a unsigned number. This also works as a low pass filter or a smothing algorithm.
 
 \subsection{Dependencies}
@@ -50,11 +50,16 @@ Simply use this core between a sink and source AXIS devices. This has been teste
 
 \section{Architecture}
 \par
-The only module is the axis\_moving\_average module. It is listed below.
+The only module is the axis\_moving\_average module. This is a continous output rather than a wait and release on range. It is listed below.
 
 \begin{itemize}
-  \item \textbf{axis\_moving\_average} Impliment moving average algorithm (see core for documentation).
+  \item \textbf{axis\_moving\_average} Implement moving average algorithm (see core for documentation).
 \end{itemize}
+
+Internally this uses the simple moving average algorithm for the output average. The weight(n) is rounded up to the nearist power of two.
+\begin{equation}
+  SMA = \sum_{i=0}^{\log_2 n}\frac{D_0+\dots+D_n}{n}
+\end{equation}
 
 \par
 This core only uses a combinatoral method to divide the accumulator. Since all weights are powers of two this is done with a part select based on bit position.
