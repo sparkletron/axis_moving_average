@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.27)  25 APR 2025 10:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.1.27)  20 MAY 2025 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -275,7 +275,8 @@ Package: preview 2023/01/17 13.2 (AUCTeX/preview-latex)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count294
 \l__pdf_internal_box=\box58
-) (./axis_moving_average_images.aux)
+)
+No file axis_moving_average_images.aux.
 \openout1 = `axis_moving_average_images.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
@@ -326,7 +327,6 @@ e
 ))
 \c@lstlisting=\count301
 Package hyperref Info: Link coloring OFF on input line 113.
-(./axis_moving_average_images.out) (./axis_moving_average_images.out)
 \@outlinefile=\write4
 \openout4 = `axis_moving_average_images.out'.
 
@@ -361,35 +361,41 @@ File: img/AFRL.png Graphic file (type png)
 Package pdftex.def Info: img/AFRL.png  used on input line 137.
 (pdftex.def)             Requested size: 310.49771pt x 67.51028pt.
 
-:tex2html_wrap228:lthtmlCropMarkHeight:=73.51028pt
+:tex2html_wrap232:lthtmlCropMarkHeight:=73.51028pt
 
-:tex2html_wrap228:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
+:tex2html_wrap232:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 Preview: Tightpage -32890 -32890 32890 32890
 [1 </home/convertinoj/Programming/HDL/fusesoc/ip_pub/math/axis_moving_average/d
 ocs/manual/img/AFRL.png>]
 
-:tex2html_wrap_indisplay237:lthtmlCropMarkHeight:=25.33337pt
+:tex2html_wrap_indisplay241:lthtmlCropMarkHeight:=25.33337pt
 
-:tex2html_wrap_indisplay237:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.30554pt
+:tex2html_wrap_indisplay241:lthtmlCropMarkDepth:=12.79865pt:1ex:=4.30554pt
 [2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-:tex2html_wrap_inline249:lthtmlCropMarkHeight:=6.0pt
+:tex2html_wrap_inline254:lthtmlCropMarkHeight:=6.0pt
 
-:tex2html_wrap_inline249:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
+:tex2html_wrap_inline254:lthtmlCropMarkDepth:=0.0pt:1ex:=4.30554pt
 [3] (./axis_moving_average_images.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `axis_moving_average_images.out' has not chan
-ged.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `axis_moving_average_images.out' has chang
+ed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `axis_moving_average_images.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11088 strings out of 476182
- 168313 string characters out of 5795595
+ 11080 strings out of 476182
+ 168041 string characters out of 5795595
  1923975 words of memory out of 5000000
- 32982 multiletter control sequences out of 15000+600000
+ 32980 multiletter control sequences out of 15000+600000
  558523 words of font info for 38 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,5n,79p,256b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s

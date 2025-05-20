@@ -28,17 +28,6 @@
   - [axis_moving_average.pdf](docs/manual/axis_moving_average.pdf)
   - [github page](https://johnathan-convertino-afrl.github.io/axis_moving_average/)
 
-### DEPENDENCIES
-#### Build
-
-  - AFRL:utility:helper:1.0.0
-  
-#### Simulation
-
-  - AFRL:simulation:axis_stimulator
-  - AFRL:simulation:clock_stimulator
-  - AFRL:utility:sim_helper
-
 ### Parameters
 
 * BUS_WIDTH : DEFAULT : 1 : Width of the AXIS bus in/out.
@@ -52,6 +41,7 @@
 #### TB
 
 * tb_axis.v
+* tb_cocotb
   
 ### FUSESOC
 
@@ -62,4 +52,6 @@
 
 * RUN WITH: (fusesoc run --target=sim VENDER:CORE:NAME:VERSION)
   - default (for IP integration builds)
+  - lint
   - sim
+  - sim_cocotb

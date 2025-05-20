@@ -79,7 +79,7 @@ module axis_moving_average
   
   integer index = 0;
   
-  reg [8*BUS_WIDTH-1:0] r_buffer_data[(2**c_WEIGHT_POWER)-1:0];
+  reg [8*BUS_WIDTH-1:0] r_buffer_data[(2**c_WEIGHT_POWER)];
   
   reg [c_BUF_SIZE-1:0]  r_accumulator;
 
