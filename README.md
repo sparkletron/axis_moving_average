@@ -5,14 +5,19 @@
 
 ---
 
-   author: JayConvertino  
+  author: JayConvertino  
+  
+  date: 2023.02.01
+  
+  details: Provides methods of computing an average upon a input data. Sliding window method.
+    
+  license: MIT   
    
-   date: 2023.02.01
-   
-   details: Provides methods of computing an average upon a input data. Sliding window method.
-      
-   license: MIT   
-   
+  Actions:  
+
+  [![Lint Status](../../actions/workflows/lint.yml/badge.svg)](../../actions)  
+  [![Manual Status](../../actions/workflows/manual.yml/badge.svg)](../../actions)  
+  
 ---
 
 ### Version
