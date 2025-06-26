@@ -1,5 +1,6 @@
 # AXIS MOVING AVERAGE
 ### Average input data using sliding window method
+---
 
 ![image](docs/manual/img/AFRL.png)
 
